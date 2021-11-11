@@ -1,0 +1,16 @@
+<table border="1">
+<tr>
+	<th>NO</th><th>カテゴリ名</th><th>食品名</th><th>残りの日数</th><th>値段</th><th>賞味期限</th><th>個数</th>
+</tr>
+<tr th:each="category:${categorylist}">
+	<td th:text="${category.value.code}"></td>
+	<td th:text="${category.value.category_code}"></td>
+	<td th:text="${category.value.name}"></td>
+	
+	<td th:text="${cateogory.value.price}"></td>
+	<td th:text="${category.value.bestbydate}"></td>
+	<td th:text="${category.value.quantity}"></td>
+	<td th:text="${item.value.price*item.value.quantity}"></td>
+
+</tr>
+</table>
